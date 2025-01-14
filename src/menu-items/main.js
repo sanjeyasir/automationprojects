@@ -7,17 +7,24 @@ const icons = {
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
-
-const invoice = {
-  id: 'group-dashboard',
+const main = {
+  id: 'group-crudimplementation',
   title: 'Main',
   type: 'group',
   children: [
     {
-      id: 'main',
+      id: 'dashboard',
       title: 'Dashboard',
       type: 'item',
       url: '/main/dashboard',
+      icon: icons.FileDoneOutlined,
+      breadcrumbs: false
+    },
+    {
+      id: 'main',
+      title: 'CrudImplementation',
+      type: 'item',
+      url: '/main/crudimplementation',
       icon: icons.FileDoneOutlined,
       breadcrumbs: false
     }
@@ -26,4 +33,4 @@ const invoice = {
   ]
 };
 
-export default invoice;
+export default main;

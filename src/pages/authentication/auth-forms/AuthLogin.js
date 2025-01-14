@@ -94,7 +94,7 @@ const AuthLogin = () => {
             if (status==201){
               localStorage.setItem("useremail",values.email);
               localStorage.setItem("username",values.email);
-              navigate('/dashboard/default');
+              navigate('main/dashboard');
               setStatus({ success: true });
             }else{
               setErrors({ submit:"Invalid password and username." });

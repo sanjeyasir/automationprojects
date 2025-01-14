@@ -5,22 +5,29 @@ import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
 
 
-const CostedYY = Loadable(lazy(() => import('pages/coatsrequest')));
+
+const CrudImplementation = Loadable(lazy(() => import('pages/maincrud')));
+const Dashboard = Loadable(lazy(() => import('pages/dashboard')));
+
 
 
 
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: '/mlplatform',
+  path: '/main',
   element: <MainLayout />,
   children: [
     {
-      path: 'costedyy',
-      element: <CostedYY />
+      path: 'dashboard',
+      element: <Dashboard />
     },
-    
+    {
+      path: 'crudimplementation',
+      element: <CrudImplementation />
+    }, 
   ]
 };
 
 export default MainRoutes;
+
